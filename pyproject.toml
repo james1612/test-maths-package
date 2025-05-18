@@ -1,0 +1,26 @@
+[project]
+name = "test-maths-package"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "James",email = "james.irish18@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "pydantic (>=2.11.4,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "test_maths_package", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+black = "^25.1.0"
+mypy = "^1.15.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
